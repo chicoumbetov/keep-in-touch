@@ -1,12 +1,19 @@
+import { MatCardModule } from '@angular/material/card';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
+const modules: any[] = [
+  MatCardModule
+];
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    ...modules
+  ],
+  exports: [
+    ...modules
   ]
 })
 export class MaterialModule { }
